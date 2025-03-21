@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add note form</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'add-note' %}">
+        {% csrf_token %}
+        <div>
+            <label>Title:</label>
+            <input type="text" id="title" name="title">
+            <label>Text:</label>
+            <input type="text" id="content" name="content">
+
+            <button type="submit">Add note</button>
+        </div>
+    </form>
+</body>
+</html>
